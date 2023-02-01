@@ -1,7 +1,8 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
-contract Force {/*
+contract Force {
+    /*
 
                    MEOW ?
          /\_/\   /
@@ -9,21 +10,21 @@ contract Force {/*
   /~____  =ø= /
  (______)__m_m)
 
-*/}
-
+*/
+}
 
 contract forceAttack {
     address target;
-   
-    constructor (address  _target) payable {
+
+    constructor(address _target) payable {
         target = _target;
     }
-    
-        
-    function attack() public{
-        selfdestruct (payable (target));
+
+    function attack() public {
+        selfdestruct(payable(target));
     }
-    function balance() public  view  returns (uint) {
+
+    function balance() public view returns (uint) {
         return address(this).balance;
     }
 }
